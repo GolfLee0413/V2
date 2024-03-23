@@ -1,0 +1,14 @@
+name : Run my python
+
+on :
+  push: # do this every time
+
+jobs:
+  build:
+  name: set up environment
+  run-on: ubuntu-lastest
+  step: 
+  - uses: action/checkout@V2
+  - name: Run my python
+    run:
+      python3 test.py
